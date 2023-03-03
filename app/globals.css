@@ -52,6 +52,48 @@ a {
 	text-decoration: none;
 }
 
+h1 {
+	font-size: 96px;
+}
+
+h2 {
+	font-size: 64px;
+}
+
+h3 {
+	font-size: 50px;
+}
+
+p {
+	font-size: 32px;
+}
+
+span {
+	font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 48px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h3 {
+		font-size: 25px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	span {
+		font-size: 10px;
+	}
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;

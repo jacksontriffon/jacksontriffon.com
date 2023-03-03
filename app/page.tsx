@@ -1,9 +1,12 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "./page.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import Header from "../components/jt-header/jt-header";
+import Tabs from "../components/tabs/tabs";
 
 export default function Home() {
-	return <main className={styles.main}></main>;
+	return (
+		<main className={styles.main}>
+			<Header></Header>
+			{/* <Tabs></Tabs> */}
+		</main>
+	);
 }

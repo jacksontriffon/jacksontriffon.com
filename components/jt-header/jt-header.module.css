@@ -1,0 +1,26 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+
+	border-bottom: 1px solid var(--primary-100);
+}
+
+.logo {
+	height: 32px;
+	width: 32px;
+}
+
+.logoContainer {
+	padding: 24px 40px;
+}
+
+.currentPage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 24px 40px;
+}
+
+.pageTitle {
+}
