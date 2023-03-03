@@ -6,3 +6,35 @@
 	padding: 8px 32px;
 	border-top: 1px solid var(--primary-100);
 }
+
+.activeTab {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--primary-100);
+}
+
+.defaultTab {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--neutral-100);
+}
+
+.defaultTab {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--neutral-100);
+}
+
+.defaultTab .icon {
+	stroke: var(--neutral-100);
+}
+
+.icon svg path {
+	margin: 8px 3px;
+}

@@ -12,6 +12,9 @@
 }
 
 .logoContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 24px 40px;
 }
 
@@ -23,4 +26,11 @@
 }
 
 .pageTitle {
+}
+
+@media screen and (max-width: 600) {
+	.logo {
+		height: 64px;
+		width: 64px;
+	}
 }
