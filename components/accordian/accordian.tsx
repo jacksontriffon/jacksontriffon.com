@@ -34,7 +34,7 @@ export default function Accordian(details: AccordianDetails) {
 						></Image>
 						<p>{details.listItems[0].title}</p>
 					</div>
-					{details.listItems.length > 1 ? (
+					{/* {details.listItems.length > 1 ? (
 						<div className={styles.item}>
 							<Image
 								{...details.listItems[1].imageDetails}
@@ -51,7 +51,7 @@ export default function Accordian(details: AccordianDetails) {
 							></Image>
 							<p>{details.listItems[2].title}</p>
 						</div>
-					) : null}
+					) : null} */}
 				</div>
 			</div>
 		</div>
