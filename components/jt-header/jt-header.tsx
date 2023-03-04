@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from "../../public/JT Logo.svg";
-import styles from "./jt-header.module.css";
+import styles from "./jt-header.module.scss";
 
 export default function Header() {
 	return (

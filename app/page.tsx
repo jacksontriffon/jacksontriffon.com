@@ -1,11 +1,11 @@
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import Header from "@/components/jt-header/jt-header";
 import Tabs from "@/components/tabs/tabs";
-import Accordian, { AccordianDetails } from "@/components/accordian/accordian";
+import Accordion, { AccordionDetails } from "@/components/accordian/accordian";
 import typescriptIcon from "../assets/logo/TypeScript.svg";
 
 export default function Home() {
-	const skillsList: [AccordianDetails] = [
+	const skillsList: [AccordionDetails] = [
 		{
 			title: "Full-stack",
 			description:
@@ -27,7 +27,11 @@ export default function Home() {
 			<Header></Header>
 			<div>
 				<a href="/contact">Jackson Triffon</a>
-				<Accordian {...skillsList[0]}></Accordian>
+				<div>
+					{skillsList.map((item, index) => (
+						<Accordion key={index} {...item}></Accordion>
+					))}
+				</div>
 			</div>
 			<Tabs></Tabs>
 		</main>

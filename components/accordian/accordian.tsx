@@ -1,21 +1,23 @@
-import styles from "./accordian.module.css";
+"use client";
+import styles from "./accordian.module.scss";
 import Image, { ImageProps } from "next/image";
+import React, { useState } from "react";
 
-export type AccordianDetails = {
+export type AccordionDetails = {
 	title: string;
 	description: string;
 	listDescription: string;
-	listItems: [AccordianItemDetails];
+	listItems: [AccordionItemDetails];
 };
 
-export type AccordianItemDetails = {
+export type AccordionItemDetails = {
 	imageDetails: ImageProps;
 	title: string;
 };
 
-export default function Accordian(details: AccordianDetails) {
+export default function Accordion(details: AccordionDetails) {
 	return (
-		<div className={styles.accordianContainer}>
+		<div className={styles.accordionContainer}>
 			<div className={styles.leftColumn}>
 				<div className={styles.block}></div>
 				<div className={styles.thread}></div>
@@ -27,31 +29,15 @@ export default function Accordian(details: AccordianDetails) {
 					{details.listDescription}
 				</span>
 				<div className={styles.listContainer}>
-					<div className={styles.item}>
-						<Image
-							{...details.listItems[0].imageDetails}
-							alt={details.listItems[0].title + " Logo"}
-						></Image>
-						<p>{details.listItems[0].title}</p>
-					</div>
-					{/* {details.listItems.length > 1 ? (
-						<div className={styles.item}>
+					{details.listItems.map((item, index) => (
+						<div className={styles.item} key={index}>
 							<Image
-								{...details.listItems[1].imageDetails}
-								alt={details.listItems[1].title + " Logo"}
+								{...item.imageDetails}
+								alt={item.title + " Logo"}
 							></Image>
-							<p>{details.listItems[1].title}</p>
+							<p>{item.title}</p>
 						</div>
-					) : null}
-					{details.listItems.length > 2 ? (
-						<div className={styles.item}>
-							<Image
-								{...details.listItems[2].imageDetails}
-								alt={details.listItems[2].title + " Logo"}
-							></Image>
-							<p>{details.listItems[2].title}</p>
-						</div>
-					) : null} */}
+					))}
 				</div>
 			</div>
 		</div>

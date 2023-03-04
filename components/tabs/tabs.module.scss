@@ -2,6 +2,11 @@
 	display: none;
 }
 
+.spacer {
+	height: 90px;
+	width: 100vw;
+}
+
 .activeTab {
 	display: flex;
 	flex-direction: column;
@@ -40,9 +45,12 @@
 	.footer {
 		display: flex;
 		justify-content: center;
+		position: fixed;
+		bottom: 0;
 		width: 100vw;
 		gap: 72px;
 		padding: 8px 32px;
 		border-top: 1px solid var(--primary-100);
+		background-color: var(--neutral-900);
 	}
 }
