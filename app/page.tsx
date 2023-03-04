@@ -3,9 +3,13 @@ import Header from "@/components/jt-header/jt-header";
 import Tabs from "@/components/tabs/tabs";
 import Accordion, { AccordionDetails } from "@/components/accordian/accordian";
 import typescriptIcon from "../assets/logo/TypeScript.svg";
+import figmaIcon from "../assets/logo/Figma.svg";
+import adobeIcon from "../assets/logo/Adobe AE.svg";
+import lottieIcon from "../assets/logo/Lottie.svg";
 
 export default function Home() {
-	const skillsList: [AccordionDetails] = [
+	// To be fetched
+	const skillsList: AccordionDetails[] = [
 		{
 			title: "Full-stack",
 			description:
@@ -21,7 +25,44 @@ export default function Home() {
 				},
 			],
 		},
+		{
+			title: "UX Designer",
+			description:
+				"Component-based design makes collaborating with devs simple",
+			listDescription: "What I love designing with:",
+			listItems: [
+				{
+					imageDetails: {
+						alt: "Figma Logo",
+						src: figmaIcon,
+					},
+					title: "Figma",
+				},
+				{
+					imageDetails: {
+						alt: "Adobe AE Logo",
+						src: adobeIcon,
+					},
+					title: "Adobe AE",
+				},
+			],
+		},
+		{
+			title: "Animations",
+			description: "From complex motion-graphics to simple fade-ins",
+			listDescription: "What I love animating with:",
+			listItems: [
+				{
+					imageDetails: {
+						alt: "Lottie Logo",
+						src: lottieIcon,
+					},
+					title: "Lottie",
+				},
+			],
+		},
 	];
+
 	return (
 		<main className={styles.main}>
 			<Header></Header>

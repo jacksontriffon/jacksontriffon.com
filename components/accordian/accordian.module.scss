@@ -4,48 +4,27 @@
 	flex-direction: row;
 	height: 100%;
 	transition: all 0.5s;
+	overflow: hidden;
 }
 
 .accordionContainer:hover {
+	transition: all 0.5s;
+
+	.rightColumn {
+		max-height: 400px;
+		padding-bottom: 40px;
+		padding-top: 24px;
+	}
+
 	.block {
 		transform: rotate(45deg) scale(0.7);
 		width: 64px;
 		height: 64px;
 	}
-}
-
-.accordionContainer:hover {
-	.leftColumn {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: auto;
-		gap: 16px;
-		background-color: var(--primary-500);
-		padding: 20px 0;
-		transition: all 0.5s;
-	}
-
-	.block {
-		width: 40px;
-		height: 40px;
-		border: 1px solid var(--primary-100);
-		transition: all 0.5s;
-		align-self: stretch;
-	}
 
 	.thread {
-		width: 1px;
-		position: relative;
 		height: 100%;
-		background-color: var(--primary-100);
-	}
-
-	.rightColumn {
-		display: flex;
-		flex-direction: column;
-		height: auto;
+		max-height: 100%;
 	}
 
 	.title {
@@ -55,24 +34,53 @@
 	}
 
 	.description {
-		display: block;
 		opacity: 1;
-		transform: scale(1);
+		color: var(--neutral-200);
 	}
 
 	.listDescription {
-		display: block;
 		opacity: 1;
-		transform: scale(1);
 	}
 
 	.listContainer {
-		display: block;
 		opacity: 1;
-		transform: scale(1);
 	}
 }
 // Not Expanded
+.leftColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	gap: 16px;
+	padding: 38px 0;
+	transition: all 0.5s;
+}
+
+.rightColumn {
+	transition: all 0.5s ease-in;
+	display: flex;
+	flex-direction: column;
+	max-height: 0;
+	padding: 16px;
+}
+
+.block {
+	width: 40px;
+	height: 40px;
+	border: 1px solid var(--primary-100);
+	transition: all 0.5s;
+	align-self: stretch;
+}
+
+.thread {
+	width: 1px;
+	position: relative;
+	max-height: 0;
+	background-color: var(--primary-100);
+}
+
 .title {
 	font-size: 4rem;
 	font-weight: 400;
@@ -82,23 +90,20 @@
 
 .description {
 	transition: all 0.5s;
-	// display: none;
 	opacity: 0;
-	// transform: scale(0);
 }
 
 .listDescription {
 	transition: all 0.5s;
-	// display: none;
 	opacity: 0;
-	// transform: scale(0);
 }
 
 .listContainer {
+	// Open animation
 	transition: all 0.5s;
-	// display: none;
 	opacity: 0;
-	// transform: scale(0);
+	// Layout
+	display: flex;
 }
 
 @media screen and (max-width: 600px) {
