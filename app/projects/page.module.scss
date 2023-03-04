@@ -1,0 +1,11 @@
+.pageContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary-900);
+	height: 100%;
+}
+.footer {
+	padding: 32px 0;
+}
