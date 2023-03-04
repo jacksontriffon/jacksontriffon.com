@@ -1,11 +1,11 @@
 import styles from "./page.module.scss";
-import Header from "@/components/jt-header/jt-header";
-import Tabs from "@/components/tabs/tabs";
 import Accordion, { AccordionDetails } from "@/components/accordian/accordian";
 import typescriptIcon from "../assets/logo/TypeScript.svg";
 import figmaIcon from "../assets/logo/Figma.svg";
 import adobeIcon from "../assets/logo/Adobe AE.svg";
 import lottieIcon from "../assets/logo/Lottie.svg";
+import Button from "@/components/button/button";
+import Link from "next/link";
 
 export default function Home() {
 	// To be fetched
@@ -65,16 +65,18 @@ export default function Home() {
 
 	return (
 		<main className={styles.main}>
-			<Header></Header>
-			<div>
+			<div className={styles.contentContainer}>
 				<a href="/contact">Jackson Triffon</a>
 				<div>
 					{skillsList.map((item, index) => (
-						<Accordion key={index} {...item}></Accordion>
+						<Accordion key={index} {...item} />
 					))}
 				</div>
+				<div className={styles.divider}></div>
+				<Link href={"/projects"}>
+					<Button {...{ text: "See Projects" }} />
+				</Link>
 			</div>
-			<Tabs></Tabs>
 		</main>
 	);
 }

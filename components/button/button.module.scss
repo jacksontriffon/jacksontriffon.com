@@ -1,0 +1,12 @@
+.buttonContainer {
+	position: relative;
+	width: fit-content;
+	height: fit-content;
+	background-color: transparent;
+	border: 1px solid var(--primary-100);
+	color: var(--primary-100);
+	padding: 12px 24px;
+	font-size: var(--p);
+	font-weight: 300;
+	cursor: pointer;
+}
