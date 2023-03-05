@@ -15,7 +15,7 @@
 	--neutral-300: #6b6b6b;
 	--neutral-900: #0e0f11;
 
-	--mobile-breakpoint: 600px;
+	// --mobile-breakpoint: 600px;
 
 	--h1: 96px;
 	--h2: 64px;
@@ -99,7 +99,7 @@ span {
 	font-size: var(--subtitle);
 }
 
-@media screen and (max-width: var(--mobile-breakpoint)) {
+@media screen and (max-width: 600px) {
 	h1 {
 		font-size: var(--h3);
 	}

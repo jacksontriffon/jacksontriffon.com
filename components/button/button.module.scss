@@ -9,4 +9,15 @@
 	font-size: var(--p);
 	font-weight: 300;
 	cursor: pointer;
+	transition: all 0.5s;
+
+	&:hover {
+		background-color: var(--primary-900);
+	}
+
+	&:active {
+		background-color: var(--primary-100);
+		color: var(--neutral-900);
+		font-size: 700;
+	}
 }

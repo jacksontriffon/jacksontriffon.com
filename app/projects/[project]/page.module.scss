@@ -1,0 +1,63 @@
+.projectContainer {
+	padding: 32px 40px;
+	display: flex;
+	flex-direction: row;
+}
+
+.leftColumn {
+}
+
+.tagline {
+	font-feature-settings: "salt" on;
+	background: linear-gradient(
+		93.69deg,
+		#ffffff -27.26%,
+		rgba(255, 255, 255, 0.33) 146.01%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-weight: 600;
+	padding: 8px 0px;
+}
+
+.responsibilitiesTitle {
+	color: var(--primary-100);
+}
+
+.responsibility {
+	color: var(--primary-200);
+}
+
+.badgeContainer {
+	display: flex;
+	gap: 8px;
+	padding: 16px 0px;
+}
+
+.examplesTitle {
+	font-size: 16px;
+}
+
+.examplesContainer {
+}
+
+.rightColumn {
+}
+
+.techStackTitle {
+}
+
+.techContainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 600px) {
+	.projectContainer {
+		flex-direction: column;
+	}
+	.techStackTitle {
+		font-size: 16px;
+	}
+}

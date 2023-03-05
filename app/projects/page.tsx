@@ -7,11 +7,7 @@ export default function ProjectTransition() {
 	const cardDetails: CardDetails = {
 		cardLogo: { src: wizitLogo, alt: "Wizit Logo" },
 		tagline: "Not your usual credit card",
-		flipped: false,
-	};
-
-	const routeToProject = () => {
-		cardDetails.flipped = true;
+		projectName: "wizit",
 	};
 
 	return (

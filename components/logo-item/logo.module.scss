@@ -3,9 +3,9 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 8px;
+	gap: 0px;
 
-	&.title {
+	p {
 		color: var(--primary-100);
 	}
 }

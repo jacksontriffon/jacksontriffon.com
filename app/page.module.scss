@@ -4,6 +4,12 @@
 	justify-content: space-between;
 	align-items: center;
 	min-height: 100vh;
+	transition: all 0.5s;
+}
+
+.main:has(button:focus) {
+	opacity: 0;
+	animation: fadeOut 0.5s forwards;
 }
 
 .divider {
@@ -16,4 +22,13 @@
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }

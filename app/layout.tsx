@@ -3,6 +3,8 @@ import styles from "./layout.module.scss";
 import localFont from "next/font/local";
 import Header from "@/components/jt-header/jt-header";
 import Tabs from "@/components/tabs/tabs";
+import Providers from "./providers";
+import { GlobalContextProvider } from "./store";
 
 // Preload font
 const redHatDisplay = localFont({
@@ -24,11 +26,13 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={redHatDisplay.className}>
 			<body>
-				{/* <div className={styles.content}> */}
-				<Header />
-				{children}
-				<Tabs />
-				{/* </div> */}
+				<GlobalContextProvider>
+					<Providers>
+						<Header />
+						{children}
+						<Tabs />
+					</Providers>
+				</GlobalContextProvider>
 			</body>
 		</html>
 	);
