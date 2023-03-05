@@ -1,4 +1,5 @@
 import "./globals.scss";
+import styles from "./layout.module.scss";
 import localFont from "next/font/local";
 import Header from "@/components/jt-header/jt-header";
 import Tabs from "@/components/tabs/tabs";
@@ -23,9 +24,11 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={redHatDisplay.className}>
 			<body>
+				{/* <div className={styles.content}> */}
 				<Header />
 				{children}
 				<Tabs />
+				{/* </div> */}
 			</body>
 		</html>
 	);

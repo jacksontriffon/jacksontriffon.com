@@ -3,6 +3,7 @@
 }
 
 .spacer {
+	display: none;
 	height: 90px;
 	width: 100vw;
 }
@@ -47,10 +48,15 @@
 		justify-content: center;
 		position: fixed;
 		bottom: 0;
+		height: auto;
 		width: 100vw;
 		gap: 72px;
 		padding: 8px 32px;
 		border-top: 1px solid var(--primary-100);
 		background-color: var(--neutral-900);
+	}
+
+	.spacer {
+		display: block;
 	}
 }

@@ -15,6 +15,8 @@
 	--neutral-300: #6b6b6b;
 	--neutral-900: #0e0f11;
 
+	--mobile-breakpoint: 600px;
+
 	--h1: 96px;
 	--h2: 64px;
 	--h3: 48px;
@@ -49,6 +51,7 @@ html,
 body {
 	max-width: 100vw;
 	overflow-x: hidden;
+	min-height: 100vh;
 }
 
 body {
@@ -96,7 +99,7 @@ span {
 	font-size: var(--subtitle);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: var(--mobile-breakpoint)) {
 	h1 {
 		font-size: var(--h3);
 	}

@@ -20,11 +20,12 @@
 		transform: rotate(45deg) scale(0.7);
 		width: 64px;
 		height: 64px;
+		background-color: var(--primary-100);
+		border: 1px solid var(--primary-100);
 	}
 
 	.thread {
-		height: 100%;
-		max-height: 100%;
+		opacity: 1;
 	}
 
 	.title {
@@ -46,7 +47,10 @@
 		opacity: 1;
 	}
 }
+
+// ----------------
 // Not Expanded
+// ----------------
 .leftColumn {
 	display: flex;
 	flex-direction: column;
@@ -69,7 +73,7 @@
 .block {
 	width: 40px;
 	height: 40px;
-	border: 1px solid var(--primary-100);
+	border: 1px solid var(--primary-200);
 	transition: all 0.5s;
 	align-self: stretch;
 }
@@ -77,15 +81,17 @@
 .thread {
 	width: 1px;
 	position: relative;
-	max-height: 0;
+	height: 100%;
 	background-color: var(--primary-100);
+	opacity: 0;
+	transition: all 0.5s;
 }
 
 .title {
 	font-size: 4rem;
 	font-weight: 400;
 	transition: all 0.5s;
-	color: var(--neutral-200);
+	color: var(--neutral-300);
 }
 
 .description {
