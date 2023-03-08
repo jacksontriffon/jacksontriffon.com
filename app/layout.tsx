@@ -3,7 +3,6 @@ import styles from "./layout.module.scss";
 import localFont from "next/font/local";
 import Header from "@/components/jt-header/jt-header";
 import Tabs from "@/components/tabs/tabs";
-import Providers from "./providers";
 import { GlobalContextProvider } from "./store";
 import PeriodicTable from "@/components/periodic-table/periodic-table";
 
