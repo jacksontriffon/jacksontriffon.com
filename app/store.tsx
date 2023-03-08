@@ -18,7 +18,7 @@ const GlobalContext = createContext<ContextProps>({
 	setRouting: (): boolean => false,
 });
 
-export const GlobalContextProvider = ({ children }) => {
+export const GlobalContextProvider = ({ children }: any) => {
 	const [routing, setRouting] = useState(false);
 
 	return (
