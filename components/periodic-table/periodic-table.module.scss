@@ -1,0 +1,19 @@
+.blockyPeriodicTableContainer {
+	display: flex;
+	justify-content: center;
+	top: 70vh;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform: scale(2);
+	transition: all 0.5s;
+	filter: blur(25px);
+	z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+	.blockyPeriodicTableContainer {
+		top: 30vh;
+		transform: scale(1);
+	}
+}
